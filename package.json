@@ -1,0 +1,19 @@
+{
+  "name": "pandatv",
+  "version": "1.0.0",
+  "description": "A high-level API to control headless Chrome over the DevTools Protocol",
+  "main": "index.js",
+  "repository": "github:liuye/pandatv",
+  "engines": {
+    "node": ">=6.4.0"
+  },
+  "scripts": {
+    "start": "nodemon -x node index.js"
+  },
+  "author": "ly",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^0.10.2",
+    "readline-sync": "^1.4.7"
+  }
+}
