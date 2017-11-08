@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
 const readlineSync = require('readline-sync');
 const util = require('./util')
+const user = require('./config').user
 
 // 定义一个全局延时消息队列, 存job信息, delay_queue根据delay排序
 let delay_queue = [];
@@ -30,9 +31,9 @@ let login = async(browser, page) => {
 
   await page.click('.sidebar-collapse-foot-userinfo .sidebar-userinfo-login-btn');
   await page.focus("input[name='account']")
-  await page.type('13120099483')
+  await page.type(user.account)
   await page.focus("input[name='password']")
-  await page.type('liuye123456')
+  await page.type(user.password)
   await page.click('.login-button-container')
   await util.sleep(1000)
 
